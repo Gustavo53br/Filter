@@ -1,0 +1,63 @@
+#Pfilter .priceArea {
+ display: flex;
+ padding: 20px;
+}
+
+#Pfilter .priceArea>* {
+ flex: 1;
+ font-size: 12pt;
+}
+
+#Pfilter .priceArea>*:last-child {
+ text-align: right;
+}
+
+#Pfilter .bar {
+ width: 90%;
+ height: 5px;
+ background: darkgrey !important;
+ position: relative;
+ margin-left: 15px;
+}
+
+#Pfilter .rangeBar {
+ height: 100%;
+ background: darkgrey;
+ position: absolute;
+ left: 0;
+ top: 0;
+}
+
+#Pfilter .rangeBar.max {
+ left: initial;
+ right: 0;
+}
+
+#Pfilter .rangeBar.min>span,
+#Pfilter .rangeBar.max>span {
+ display: block;
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ background: #58c1ba !important;
+ position: absolute;
+}
+
+#Pfilter .rangeBar.min>span {
+ right: 0;
+ top: 50%;
+ transform: translate(50%, -50%);
+}
+
+#Pfilter .rangeBar.max>span {
+ left: 0;
+ top: 50%;
+ transform: translate(-50%, -50%);
+}
+
+@media(max-width:769px) {
+ #Pfilter {
+  max-width: 90%;
+  margin: auto;
+ }
+}
